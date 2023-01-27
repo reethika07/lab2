@@ -1,0 +1,818 @@
+  Setting attribute of root '/': 'stdout_log' = genus.log.23-01-26_20-01
+  Setting attribute of root '/': 'command_log' = genus.cmd.23-01-26_20-01
+WARNING: This version of the tool is 1150 days old.
+@genus:root: 1> set top_design fifo1_sramb
+fifo1_sramb
+@genus:root: 2> source ../scripts/genus.tcl
+Sourcing '../scripts/genus.tcl' (Thu Jan 26 20:43:08 PST 2023)...
+#@ Begin verbose source scripts/genus.tcl
+@file(genus.tcl) 1: history keep 100
+@file(genus.tcl) 2: set_db timing_report_fields "delay arrival transition fanout load cell timing_point"
+  Setting attribute of root '/': 'timing_report_fields' = delay arrival transition fanout load cell timing_point
+@file(genus.tcl) 4: source -echo -verbose ../../$top_design.design_config.tcl
+Sourcing '../../fifo1_sramb.design_config.tcl' (Thu Jan 26 20:43:08 PST 2023)...
+#@ Begin verbose source fifo1_sramb.design_config.tcl
+@file(fifo1_sramb.design_config.tcl) 1: set lib_dir /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib
+set lib_dir /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib
+@file(fifo1_sramb.design_config.tcl) 24: set add_ios 1
+set add_ios 1
+@file(fifo1_sramb.design_config.tcl) 25: set pad_design 1
+set pad_design 1
+@file(fifo1_sramb.design_config.tcl) 26: set design_size { 580 580  } 
+set design_size { 580 580  } 
+@file(fifo1_sramb.design_config.tcl) 27: set design_io_border 310
+set design_io_border 310
+@file(fifo1_sramb.design_config.tcl) 28: set dc_floorplanning 1
+set dc_floorplanning 1
+@file(fifo1_sramb.design_config.tcl) 29: set enable_dft 0
+set enable_dft 0
+@file(fifo1_sramb.design_config.tcl) 30: set innovus_enable_manual_macro_placement 0
+set innovus_enable_manual_macro_placement 0
+@file(fifo1_sramb.design_config.tcl) 32: set rtl_list [list ../rtl/$top_design.sv ]
+set rtl_list [list ../rtl/$top_design.sv ]
+@file(fifo1_sramb.design_config.tcl) 33: set slow_corner "ss0p95v125c_2p25v ss0p95v125c ss0p75v125c_i0p75v"
+set slow_corner "ss0p95v125c_2p25v ss0p95v125c ss0p75v125c_i0p75v"
+@file(fifo1_sramb.design_config.tcl) 34: set fast_corner "ff0p95vn40c ff1p16vn40c_2p75v ff1p16vn40c"
+set fast_corner "ff0p95vn40c ff1p16vn40c_2p75v ff1p16vn40c"
+@file(fifo1_sramb.design_config.tcl) 35: set synth_corners $slow_corner
+set synth_corners $slow_corner
+@file(fifo1_sramb.design_config.tcl) 36: set synth_corners_target "ss0p95v125c" 
+set synth_corners_target "ss0p95v125c" 
+@file(fifo1_sramb.design_config.tcl) 38: set synth_corners_slow $slow_corner
+set synth_corners_slow $slow_corner
+@file(fifo1_sramb.design_config.tcl) 39: set synth_corners_fast $fast_corner
+set synth_corners_fast $fast_corner
+@file(fifo1_sramb.design_config.tcl) 40: set slow_metal Cmax_125
+set slow_metal Cmax_125
+@file(fifo1_sramb.design_config.tcl) 41: set fast_metal Cmax_125
+set fast_metal Cmax_125
+@file(fifo1_sramb.design_config.tcl) 42: set lib_types "$lib_dir/io_std/db_nldm $lib_dir/sram_lp/db_nldm $lib_dir/pll/db_nldm"
+set lib_types "$lib_dir/io_std/db_nldm $lib_dir/sram_lp/db_nldm $lib_dir/pll/db_nldm"
+@file(fifo1_sramb.design_config.tcl) 43: set ndm_types "$lib_dir/stdcell_rvt/ndm $lib_dir/stdcell_hvt/ndm $lib_dir/sram_lp/ndm $lib_dir/io_std/ndm  $lib_dir/pll/ndm"
+set ndm_types "$lib_dir/stdcell_rvt/ndm $lib_dir/stdcell_hvt/ndm $lib_dir/sram_lp/ndm $lib_dir/io_std/ndm  $lib_dir/pll/ndm"
+@file(fifo1_sramb.design_config.tcl) 44: set lib_types_target "$lib_dir/stdcell_rvt/db_nldm"
+set lib_types_target "$lib_dir/stdcell_rvt/db_nldm"
+@file(fifo1_sramb.design_config.tcl) 46: set sub_lib_type "saed32?vt_ saed32sramlp_ saed32io_wb_ saed32pll_"
+set sub_lib_type "saed32?vt_ saed32sramlp_ saed32io_wb_ saed32pll_"
+@file(fifo1_sramb.design_config.tcl) 47: set sub_lib_type_target "saed32rvt_"
+set sub_lib_type_target "saed32rvt_"
+@file(fifo1_sramb.design_config.tcl) 49: set lef_types [list $lib_dir/stdcell_hvt/lef  \
+$lib_dir/stdcell_rvt/lef \
+$lib_dir/stdcell_lvt/lef \
+$lib_dir/sram_lp/lef/ \
+$lib_dir/io_std/lef \
+$lib_dir/pll/lef \
+]
+set lef_types [list $lib_dir/stdcell_hvt/lef  \
+$lib_dir/stdcell_rvt/lef \
+$lib_dir/stdcell_lvt/lef \
+$lib_dir/sram_lp/lef/ \
+$lib_dir/io_std/lef \
+$lib_dir/pll/lef \
+]
+@file(fifo1_sramb.design_config.tcl) 57: set sub_lef_type "saed32nm_?vt_*.lef saed32_sramlp_*.lef saed32io_std_wb saed32_PLL.lef"
+set sub_lef_type "saed32nm_?vt_*.lef saed32_sramlp_*.lef saed32io_std_wb saed32_PLL.lef"
+@file(fifo1_sramb.design_config.tcl) 58: set mwlib_types [list $lib_dir/stdcell_hvt/milkyway \
+$lib_dir/stdcell_rvt/milkyway \
+$lib_dir/stdcell_lvt/milkyway  \
+$lib_dir/io_std/milkyway \
+$lib_dir/sram_lp/milkyway $lib_dir/pll/milkyway \
+ ]
+set mwlib_types [list $lib_dir/stdcell_hvt/milkyway \
+$lib_dir/stdcell_rvt/milkyway \
+$lib_dir/stdcell_lvt/milkyway  \
+$lib_dir/io_std/milkyway \
+$lib_dir/sram_lp/milkyway $lib_dir/pll/milkyway \
+ ]
+@file(fifo1_sramb.design_config.tcl) 64: set sub_mwlib_type "saed32nm_?vt_* SRAM32NM saed32io_wb_* SAED32_PLL_FR*"
+set sub_mwlib_type "saed32nm_?vt_* SRAM32NM saed32io_wb_* SAED32_PLL_FR*"
+@file(fifo1_sramb.design_config.tcl) 67: set topdir [ lindex [ regexp -inline "(.*)\(syn\|pt\|apr\)" [pwd] ] 1 ]
+set topdir [ lindex [ regexp -inline "(.*)\(syn\|pt\|apr\)" [pwd] ] 1 ]
+@file(fifo1_sramb.design_config.tcl) 68: set FCL 0
+set FCL 0
+@file(fifo1_sramb.design_config.tcl) 69: set split_constraints 0
+set split_constraints 0
+#@ End verbose source fifo1_sramb.design_config.tcl
+@file(genus.tcl) 6: set designs [get_db designs * ]
+@file(genus.tcl) 7: if { $designs != "" } {
+  delete_obj $designs
+}
+@file(genus.tcl) 11: source ../scripts/genus-get-timlibslefs.tcl
+Sourcing '../scripts/genus-get-timlibslefs.tcl' (Thu Jan 26 20:43:08 PST 2023)...
+#@ Begin verbose source scripts/genus-get-timlibslefs.tcl
+@file(genus-get-timlibslefs.tcl) 9: set search_path ""
+@file(genus-get-timlibslefs.tcl) 10: foreach i $lib_types { lappend search_path $i }
+@file(genus-get-timlibslefs.tcl) 20: set link_library ""
+@file(genus-get-timlibslefs.tcl) 21: foreach i $search_path {
+  foreach k $synth_corners {
+      foreach m $sub_lib_type {
+        foreach j [glob -nocomplain $i/$m$k.lib ] {
+          lappend link_library [file tail $j ]
+        }
+      }
+  }
+}
+@file(genus-get-timlibslefs.tcl) 32: foreach i $lib_types_target { 
+   lappend search_path_target $i 
+   lappend search_path $i 
+}
+@file(genus-get-timlibslefs.tcl) 45: set target_library ""
+@file(genus-get-timlibslefs.tcl) 46: foreach i $search_path_target {
+  foreach k $synth_corners_target {
+      foreach m $sub_lib_type_target {
+        foreach j [glob -nocomplain $i/$m$k.lib ] {
+          lappend target_library [file tail $j ]
+          lappend link_library [file tail $j ]
+        }
+      }
+  }
+}
+@file(genus-get-timlibslefs.tcl) 58: set lef_path ""
+@file(genus-get-timlibslefs.tcl) 59: foreach k $lef_types {
+  foreach m $sub_lef_type {
+    foreach j [glob -nocomplain $k/$m ] {
+      lappend lef_path  $j 
+    }
+  }
+}
+@file(genus-get-timlibslefs.tcl) 69: lappend search_path .
+#@ End verbose source scripts/genus-get-timlibslefs.tcl
+@file(genus.tcl) 13: set_db init_lib_search_path $search_path
+  Setting attribute of root '/': 'init_lib_search_path' = /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/io_std/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/pll/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm .
+@file(genus.tcl) 15: set_db library $link_library
+
+Threads Configured:8
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_wire_load on line 15913 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/io_std/db_nldm/saed32io_wb_ss0p95v125c_2p25v.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_operating_conditions on line 15914 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/io_std/db_nldm/saed32io_wb_ss0p95v125c_2p25v.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_wire_load_selection on line 15915 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/io_std/db_nldm/saed32io_wb_ss0p95v125c_2p25v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW1024x8' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 1446)
+        : Sequential timing checks, such as 'setup_rising' or 'hold_rising', on flop and latch cells require a clock pin. Verify that the 'clock' attribute of the clock pin is set to 'true' or that the clock pin has a 'clocked_on' attribute.
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW1024x8'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW128x48' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 2322)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW128x48'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW128x8' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 2760)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW128x8'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW128x46' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 1884)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW128x46'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW256x128' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 3198)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW256x128'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW256x32' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 3636)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW256x32'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW256x48' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 4512)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW256x48'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW256x46' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 4074)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW256x46'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_operating_conditions on line 24300 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_wire_load on line 24301 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_wire_load_selection on line 24302 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW256x8' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 4950)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW256x8'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW32x50' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 5388)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW32x50'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW512x8' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 6702)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW512x8'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW512x32' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 6264)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW512x32'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW512x128' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 5826)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW512x128'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW64x128' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 7140)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW64x128'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW64x32' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 7578)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW64x32'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW64x34' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 8016)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW64x34'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP1RW64x8' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 8454)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP1RW64x8'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP2RW128x16' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 8892)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP2RW128x16'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP2RW128x32' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 9748)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP2RW128x32'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : Missing clock pin in the sequential cell. [LBR-525]
+        : Clock pin absent in sequential cell(s) 'SRAMLP2RW128x4' (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib, Line 10604)
+Warning : Missing sequential block in the sequential cell. [LBR-526]
+        : Sequential block (ff/ff_bank/latch/latch_bank) missing in cell(s) 'SRAMLP2RW128x4'. This may cause potential problems with results of downstream tools (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram_lp/db_nldm/saed32sramlp_ss0p75v125c_i0p75v.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_operating_conditions on line 1766 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/pll/db_nldm/saed32pll_ss0p95v125c_2p25v.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_wire_load on line 1767 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/pll/db_nldm/saed32pll_ss0p95v125c_2p25v.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_wire_load_selection on line 1768 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/pll/db_nldm/saed32pll_ss0p95v125c_2p25v.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_operating_conditions on line 226626 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_wire_load on line 226627 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_wire_load_selection on line 226628 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.lib)
+
+  Message Summary for Library all 4 libraries:
+  ********************************************
+  Missing sequential block in the sequential cell. [LBR-526]: 36
+  Missing clock pin in the sequential cell. [LBR-525]: 38
+  Missing a function attribute in the output pin definition. [LBR-518]: 76
+  An attribute is used before it is defined. [LBR-511]: 12
+  An unsupported construct was detected in this library. [LBR-40]: 52
+  ********************************************
+ 
+Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
+        : The libraries are 'saed32io_wb_ss0p95v125c_2p25v' and 'saed32sramlp_ss0p75v125c_i0p75v'.
+        : This is a common source of delay calculation confusion and should be avoided.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (0.990000, 0.950000, 125.000000) in library 'saed32io_wb_ss0p95v125c_2p25v.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (0.990000, 0.750000, 125.000000) in library 'saed32sramlp_ss0p75v125c_i0p75v.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (0.990000, 0.950000, 125.000000) in library 'saed32pll_ss0p95v125c_2p25v.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (0.990000, 0.950000, 125.000000) in library 'saed32rvt_ss0p95v125c.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER01' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER01' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER15' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER15' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER20' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER20' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER35' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER35' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER40' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER40' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER50' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER50' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLER' must have an output pin.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFNSRARX1_RVT'.  Ignoring the test_cell.
+        : Review the definition of the test_cell's function or its parent library-cell's function.  An inconsistency between the two may exist.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFNSRARX2_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFNSRASX1_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFNSRASX2_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFNSRX1_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFNSRX2_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFSRARX1_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFSRARX2_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFSRASX1_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFSRASX2_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFSRSSRX1_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFSRSSRX2_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFSRX1_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'RSDFFSRX2_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'SDFFSSRX1_RVT'.  Ignoring the test_cell.
+Warning : Malformed test_cell. [LBR-64]
+        : Unusable test_cell in 'SDFFSSRX2_RVT'.  Ignoring the test_cell.
+  Setting attribute of root '/': 'library' = saed32io_wb_ss0p95v125c_2p25v.lib saed32sramlp_ss0p75v125c_i0p75v.lib saed32pll_ss0p95v125c_2p25v.lib saed32rvt_ss0p95v125c.lib
+@file(genus.tcl) 17: set_db dft_opcg_domain_blocking true
+  Setting attribute of root '/': 'dft_opcg_domain_blocking' = true
+@file(genus.tcl) 19: set_db auto_ungroup none
+  Setting attribute of root '/': 'auto_ungroup' = none
+@file(genus.tcl) 22: read_hdl -language sv ../rtl/${top_design}.sv
+@file(genus.tcl) 34: elaborate $top_design
+Warning : Found a combinational arc in a sequential cell. [LBR-126]
+        : The arc is named 'REF_CLK_CLK_1X_n91' between pins 'REF_CLK' and 'CLK_1X' in libcell 'PLL'.
+        : The timing arc connects two pins that are already connected by a sequential arc. It is not recommended to mix combinational arcs with sequential arcs in a sequential cell.
+Warning : Found a combinational arc in a sequential cell. [LBR-126]
+        : The arc is named 'REF_CLK_CLK_2X_n93' between pins 'REF_CLK' and 'CLK_2X' in libcell 'PLL'.
+Warning : Found a combinational arc in a sequential cell. [LBR-126]
+        : The arc is named 'REF_CLK_CLK_4X_n95' between pins 'REF_CLK' and 'CLK_4X' in libcell 'PLL'.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_SE_H53' between pins 'CLK' and 'SE' in libcell 'CGLNPRX2_RVT' is a sequential timing arc.
+        : The library cell will be treated as a timing-model. Make sure that the timing arcs and output function are defined correctly. Even if the cell intends to have dual-functionality, it cannot be unmapped or automatically inferred.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_SE_H53' between pins 'CLK' and 'SE' in libcell 'CGLNPRX8_RVT' is a sequential timing arc.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_EN_H50' between pins 'CLK' and 'EN' in libcell 'CGLNPSX16_RVT' is a sequential timing arc.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_EN_H50' between pins 'CLK' and 'EN' in libcell 'CGLNPSX2_RVT' is a sequential timing arc.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_EN_H50' between pins 'CLK' and 'EN' in libcell 'CGLNPSX4_RVT' is a sequential timing arc.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_EN_H50' between pins 'CLK' and 'EN' in libcell 'CGLNPSX8_RVT' is a sequential timing arc.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_SE_Ha3' between pins 'CLK' and 'SE' in libcell 'CGLPPRX2_RVT' is a sequential timing arc.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_SE_Ha3' between pins 'CLK' and 'SE' in libcell 'CGLPPRX8_RVT' is a sequential timing arc.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_EN_Ha0' between pins 'CLK' and 'EN' in libcell 'CGLPPSX16_RVT' is a sequential timing arc.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_EN_Ha0' between pins 'CLK' and 'EN' in libcell 'CGLPPSX2_RVT' is a sequential timing arc.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_EN_Ha0' between pins 'CLK' and 'EN' in libcell 'CGLPPSX4_RVT' is a sequential timing arc.
+Warning : Detected both combinational and sequential timing arcs in a library cell. This might prevent the tool from using this cell for technology mapping. The tool will treat it as unusable. [LBR-76]
+        : The arc 'CLK_EN_Ha0' between pins 'CLK' and 'EN' in libcell 'CGLPPSX8_RVT' is a sequential timing arc.
+Warning : Missing an incoming setup timing arc for next_state library pin. [LBR-34]
+        : Library pin 'RDFFNX1_RVT/D' has no incoming setup arc.
+        : Pin used in a next_state function must have an incoming setup timing arc. Otherwise, the library cell will be treated as a timing model.
+Warning : Missing an incoming setup timing arc for next_state library pin. [LBR-34]
+        : Library pin 'RDFFNX2_RVT/D' has no incoming setup arc.
+Warning : Missing an incoming setup timing arc for next_state library pin. [LBR-34]
+        : Library pin 'RDFFX1_RVT/D' has no incoming setup arc.
+Warning : Missing an incoming setup timing arc for next_state library pin. [LBR-34]
+        : Library pin 'RDFFX2_RVT/D' has no incoming setup arc.
+Warning : Missing an incoming setup timing arc for next_state library pin. [LBR-34]
+        : Library pin 'RSDFFNSRX1_RVT/D' has no incoming setup arc.
+Warning : Missing an incoming setup timing arc for next_state library pin. [LBR-34]
+        : Library pin 'RSDFFNSRX1_RVT/SE' has no incoming setup arc.
+Warning : Missing an incoming setup timing arc for next_state library pin. [LBR-34]
+        : Library pin 'RSDFFNSRX1_RVT/SI' has no incoming setup arc.
+Warning : Missing an incoming setup timing arc for next_state library pin. [LBR-34]
+        : Library pin 'RSDFFNSRX2_RVT/D' has no incoming setup arc.
+Warning : Missing an incoming setup timing arc for next_state library pin. [LBR-34]
+        : Library pin 'RSDFFNSRX2_RVT/SE' has no incoming setup arc.
+Warning : Missing an incoming setup timing arc for next_state library pin. [LBR-34]
+        : Library pin 'RSDFFNSRX2_RVT/SI' has no incoming setup arc.
+  Libraries have 130 usable logic and 108 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'fifo1_sramb' from file '../rtl/fifo1_sramb.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'fifo1_sramb' with default parameters value.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'fifomem_DATASIZE8_ADDRSIZE10' in file '../rtl/fifo1_sramb.sv' on line 71.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'fifomem_DATASIZE8_ADDRSIZE10' in file '../rtl/fifo1_sramb.sv' on line 86.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'rdata[0]' in module 'fifomem_DATASIZE8_ADDRSIZE10'.
+        : This may cause simulation mismatches between the original and synthesized designs.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'rdata[1]' in module 'fifomem_DATASIZE8_ADDRSIZE10'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'rdata[2]' in module 'fifomem_DATASIZE8_ADDRSIZE10'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'rdata[3]' in module 'fifomem_DATASIZE8_ADDRSIZE10'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'rdata[4]' in module 'fifomem_DATASIZE8_ADDRSIZE10'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'rdata[5]' in module 'fifomem_DATASIZE8_ADDRSIZE10'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'rdata[6]' in module 'fifomem_DATASIZE8_ADDRSIZE10'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'rdata[7]' in module 'fifomem_DATASIZE8_ADDRSIZE10'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'fifo1_sramb'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+UM:   timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                      elaborate
+@file(genus.tcl) 38: if { [info exists enable_dft] &&  $enable_dft  } {
+
+   if { [file exists ../../${top_design}.dft_eco.tcl] == 1 } {
+      # Make eco changes like instantiating a PLL.
+      source -echo -verbose ../../${top_design}.dft_eco.tcl
+   } 
+   # Setup DFT/OPCG dependencies.
+   source -echo -verbose ../../${top_design}.dft_config.tcl
+}
+@file(genus.tcl) 48: if { [ info exists add_ios ] && $add_ios } {
+   source -echo -verbose ../scripts/genus-add_ios.tcl
+   # Source the design dependent code that will put IOs on different sides
+   source ../../$top_design.add_ios.tcl
+}
+Sourcing '../scripts/genus-add_ios.tcl' (Thu Jan 26 20:43:10 PST 2023)...
+#@ Begin verbose source scripts/genus-add_ios.tcl
+@file(genus-add_ios.tcl) 2: proc insert_io ...
+proc insert_io { port side} {
+global top_design
+  set this_io io_${side}_${port}
+  if {  $side == "t"   } {
+   if { [get_db [get_port $port ] .direction ] == "in" } {
+    create_inst -name $this_io I1025_NS $top_design 
+   } else {
+    create_inst -name $this_io D8I1025_NS $top_design
+   }
+  }
+  if { $side == "b"  } {
+   if { [get_db [get_port $port ] .direction ] == "in" } {
+    create_inst -name $this_io I1025_NS $top_design
+   } else {
+    create_inst -name $this_io D8I1025_NS $top_design
+   }
+  }
+  if {  $side == "r"  } {
+   if { [get_db [get_port $port ] .direction ] == "in" } {
+    create_inst -name $this_io I1025_NS $top_design
+   } else {
+    create_inst -name $this_io D8I1025_NS $top_design
+   }
+  }
+  if { $side == "l"  } {
+   if { [get_db [get_port $port ] .direction ] == "in" } {
+    create_inst -name $this_io I1025_NS $top_design
+   } else {
+    create_inst -name $this_io D8I1025_NS $top_design 
+   }
+  }
+
+
+
+  #DIN is input to IO_PAD
+  #DOUT is output of IO_PAD
+  #EN is the IO_PAD enable to output
+  if { [get_db [get_port $port ] .direction ] == "in" } {
+     # Disconnect all pins related to the old port and make a new net name and connect them up to that new net.
+     
+     # Find all the hpins or real pins connected at the top level to the port net.
+     # this is a little tricky since Genus indicates leaf pins which might cross hierarchy boundaries except for the all_connected command
+     set pins [get_db [ all_connected $port ] -if ".obj_type==*pin"] 
+     # disconnect seems to be working better with the get_db object instead of the text name.
+     foreach_in i $pins { disconnect $i  }
+     foreach_in i $pins { 
+        # Connect arguments must have the driver pin/port followed by a load.  net name is optional, but needed if a new net.
+        connect -net ${this_io}_net ${this_io}/DOUT [get_db $i .name ]
+     }
+
+     # connect up the PADIO to the original port net and connect other important PAD pins.
+     connect -net $port $port $this_io/PADIO
+     #connect_net [get_nets  *Logic0* ] ${this_io}/EN 
+     connect 1 ${this_io}/R_EN
+  } else {
+     # Find all the hpins or real pins connected at the top level to the port net.
+     # this is a little tricky since Genus indicates leaf pins which might cross hierarchy boundaries except for the all_connected command
+     set pins [get_db [ all_connected $port ] -if ".obj_type==*pin"] 
+     # disconnect seems to be working better with the get_db object instead of the text name.
+     foreach_in i $pins { disconnect $i  }
+     # Connect arguments must have the driver pin/port followed by a load.  net name is optional, but needed if a new net.
+     connect -net ${this_io}_net [get_db $pins -if ".direction==out" ] $this_io/DIN
+     # This internal driver might drive to other loads other than the port.  It might drive back into other spots in the design.
+     set other_receivers [get_db $pins -if ".direction==in" ]
+     if {$other_receivers!=""} { 
+        connect -net ${this_io}_net [get_db $pins -if ".direction==out" ] $other_receivers
+     }
+
+     # connect up the PADIO to the original port net and connect other important PAD pins.
+     connect -net $port $this_io/PADIO $port
+     connect 1 $this_io/EN 
+     #connect_net [get_nets  *Logic0* ] $this_io/R_EN 
+  }
+}
+#@ End verbose source scripts/genus-add_ios.tcl
+Sourcing '../../fifo1_sramb.add_ios.tcl' (Thu Jan 26 20:43:10 PST 2023)...
+#@ Begin verbose source fifo1_sramb.add_ios.tcl
+@file(fifo1_sramb.add_ios.tcl) 2: proc get_port_names ...
+@file(fifo1_sramb.add_ios.tcl) 11: foreach i [get_port_names [ get_ports rdata* ] ]  {
+  insert_io  $i l 
+}
+@file(fifo1_sramb.add_ios.tcl) 14: foreach i [ get_port_names [ get_ports wdata* ] ] {
+  insert_io  $i r 
+}
+@file(fifo1_sramb.add_ios.tcl) 17: foreach i { rempty wfull }  {
+  insert_io  $i t 
+}
+@file(fifo1_sramb.add_ios.tcl) 20: foreach i { rrst_n rclk rinc wrst_n wclk2x wclk winc }  {
+  insert_io  $i b 
+}
+#@ End verbose source fifo1_sramb.add_ios.tcl
+@file(genus.tcl) 55: update_names -map { {"." "_" }} -inst -force
+Warning : Port names affected by change_names do not automatically get updated in written out SV wrapper module. [CHNM-108] [update_names]
+        : If user is setting  write_sv_port_wrapper = true then the port names affected by usage of change_name  
+    need to be updated manually in the written out SV wrapper module.
+        : If user is setting write_sv_port_wrapper = true then the port names affected by usage of change_name need to be updated manually in the written out SV wrapper module.
+@file(genus.tcl) 56: update_names -map {{"[" "_"} {"]" "_"}} -inst -force
+Warning : Port names affected by change_names do not automatically get updated in written out SV wrapper module. [CHNM-108] [update_names]
+        : If user is setting  write_sv_port_wrapper = true then the port names affected by usage of change_name  
+    need to be updated manually in the written out SV wrapper module.
+@file(genus.tcl) 57: update_names -map {{"[" "_"} {"]" "_"}} -port_bus
+Warning : Port names affected by change_names do not automatically get updated in written out SV wrapper module. [CHNM-108] [update_names]
+        : If user is setting  write_sv_port_wrapper = true then the port names affected by usage of change_name  
+    need to be updated manually in the written out SV wrapper module.
+@file(genus.tcl) 58: update_names -map {{"[" "_"} {"]" "_"}} -hport_bus
+Warning : Port names affected by change_names do not automatically get updated in written out SV wrapper module. [CHNM-108] [update_names]
+        : If user is setting  write_sv_port_wrapper = true then the port names affected by usage of change_name  
+    need to be updated manually in the written out SV wrapper module.
+@file(genus.tcl) 59: update_names -inst -hnet -restricted {[} -convert_string "_"
+Warning : Option 'convert_string' is obsolete. [CHNM-107] [update_names]
+        : Option 'convert_string' has been replaced by 'replace_str'.
+        : The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use new option.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_0__U'.
+        : Add 'set_attribute ui_respects_preserve false' (legacy_ui) or 'set_db ui_respects_preserve false'(common_ui) to allow name changes on preserved objects.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_1__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_2__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_3__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_4__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_5__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_6__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_7__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_7_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_6_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_5_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_4_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_3_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_2_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_1_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_0_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_7_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_6_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_5_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_4_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_3_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_2_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_1_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_0_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_t_rempty'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_t_wfull'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_rrst_n'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_rclk'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_rinc'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_wrst_n'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_wclk2x'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_wclk'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_winc'.
+Warning : Port names affected by change_names do not automatically get updated in written out SV wrapper module. [CHNM-108] [update_names]
+        : If user is setting  write_sv_port_wrapper = true then the port names affected by usage of change_name  
+    need to be updated manually in the written out SV wrapper module.
+@file(genus.tcl) 60: update_names -inst -hnet -restricted {]} -convert_string "_"
+Warning : Option 'convert_string' is obsolete. [CHNM-107] [update_names]
+        : Option 'convert_string' has been replaced by 'replace_str'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_0__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_1__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_2__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_3__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_4__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_5__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_6__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'genblk1_7__U'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_7_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_6_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_5_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_4_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_3_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_2_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_1_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_l_rdata_0_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_7_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_6_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_5_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_4_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_3_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_2_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_1_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_r_wdata_in_0_'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_t_rempty'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_t_wfull'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_rrst_n'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_rclk'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_rinc'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_wrst_n'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_wclk2x'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_wclk'.
+Warning : Failed to change names. [CHNM-110]
+        : Cannot change name of preserved instance 'io_b_winc'.
+Warning : Port names affected by change_names do not automatically get updated in written out SV wrapper module. [CHNM-108] [update_names]
+        : If user is setting  write_sv_port_wrapper = true then the port names affected by usage of change_name  
+    need to be updated manually in the written out SV wrapper module.
+@file(genus.tcl) 64: source -echo -verbose ../../constraints/${top_design}.sdc
+Sourcing '../../constraints/fifo1_sramb.sdc' (Thu Jan 26 20:43:10 PST 2023)...
+#@ Begin verbose source constraints/fifo1_sramb.sdc
+@file(fifo1_sramb.sdc) 1: if { [info exists synopsys_program_name ] && ($synopsys_program_name == "icc2_shell") } {
+    puts " Creating ICC2 MCMM "
+    create_mode func
+    create_corner slow
+    create_scenario -mode func -corner slow -name func_slow
+    current_scenario func_slow
+    set_operating_conditions ss0p75v125c
+    read_parasitic_tech -tlup $tlu_dir/saed32nm_1p9m_Cmax.tluplus -layermap $tlu_dir/saed32nm_tf_itf_tluplus.map -name Cmax
+    read_parasitic_tech -tlup $tlu_dir/saed32nm_1p9m_Cmin.tluplus -layermap $tlu_dir/saed32nm_tf_itf_tluplus.map -name Cmin
+    set_parasitic_parameters -early_spec Cmax -early_temperature 125
+    set_parasitic_parameters -late_spec Cmax -late_temperature 125
+    #set_parasitic_parameters -early_spec 1p9m_Cmax -early_temperature 125 -corner default
+    #set_parasitic_parameters -late_spec 1p9m_Cmax -late_temperature 125 -corner default
+
+    #set_scenario_status  default -active false
+    set_scenario_status func_slow -active true -hold true -setup true
+}
+if { [info exists synopsys_program_name ] && ($synopsys_program_name == "icc2_shell") } {
+    puts " Creating ICC2 MCMM "
+    create_mode func
+    create_corner slow
+    create_scenario -mode func -corner slow -name func_slow
+    current_scenario func_slow
+    set_operating_conditions ss0p75v125c
+    read_parasitic_tech -tlup $tlu_dir/saed32nm_1p9m_Cmax.tluplus -layermap $tlu_dir/saed32nm_tf_itf_tluplus.map -name Cmax
+    read_parasitic_tech -tlup $tlu_dir/saed32nm_1p9m_Cmin.tluplus -layermap $tlu_dir/saed32nm_tf_itf_tluplus.map -name Cmin
+    set_parasitic_parameters -early_spec Cmax -early_temperature 125
+    set_parasitic_parameters -late_spec Cmax -late_temperature 125
+    #set_parasitic_parameters -early_spec 1p9m_Cmax -early_temperature 125 -corner default
+    #set_parasitic_parameters -late_spec 1p9m_Cmax -late_temperature 125 -corner default
+
+    #set_scenario_status  default -active false
+    set_scenario_status func_slow -active true -hold true -setup true
+}
+@file(fifo1_sramb.sdc) 18: set wclk_period 0.85
+set wclk_period 0.85
+@file(fifo1_sramb.sdc) 19: set rclk_period 0.75
+set rclk_period 0.75
+@file(fifo1_sramb.sdc) 20: set wclk2x_period [ expr $wclk_period / 2 ]
+set wclk2x_period [ expr $wclk_period / 2 ]
+@file(fifo1_sramb.sdc) 22: create_clock -name "wclk" -period $wclk_period  wclk
+create_clock -name "wclk" -period $wclk_period  wclk
+@file(fifo1_sramb.sdc) 23: set_clock_uncertainity -setup 0.008 wclk
+set_clock_uncertainity -setup 0.008 wclk
+#@ End verbose source constraints/fifo1_sramb.sdc
+#@ End verbose source scripts/genus.tcl
+invalid command name "set_clock_uncertainity"
+@genus:root: 3> report_qor
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 19.12-s121_1
+  Generated on:           Jan 26 2023  08:43:26 pm
+  Module:                 fifo1_sramb
+  Technology libraries:   saed32io_wb_ss0p95v125c_2p25v 
+                          saed32sramlp_ss0p75v125c_i0p75v 1.0000000
+                          saed32pll_ss0p95v125c_2p25v 
+                          saed32rvt_ss0p95v125c 1.0000000
+  Operating conditions:   _nominal_ (balanced_tree)
+  Wireload mode:          enclosed
+  Area mode:              timing library
+============================================================
+
+Timing
+--------
+
+Clock Period 
+-------------
+wclk   850.0 
+
+
+  Cost    Critical            Violating 
+ Group   Path Slack    TNS      Paths   
+----------------------------------------
+default    No paths      0.0            
+wclk         -352.7   -897.0         10 
+----------------------------------------
+Total                 -897.0         10 
+
+Instance Count
+--------------
+Leaf Instance Count             560 
+Physical Instance count           0 
+Sequential Instance Count       106 
+Combinational Instance Count    454 
+Hierarchical Instance Count      27 
+
+Area
+----
+Cell Area                          512488.958
+Physical Cell Area                 0.000
+Total Cell Area (Cell+Physical)    512488.958
+Net Area                           0.000
+Total Area (Cell+Physical+Net)     512488.958
+
+Max Fanout                         52 (n_70)
+Min Fanout                         0 (wfull)
+Average Fanout                     1.3
+Terms to net ratio                 2.3197
+Terms to instance ratio            5.0661
+Runtime                            13.805954 seconds
+Elapsed Runtime                    69 seconds
+Genus peak memory usage            1414.74 
+Innovus peak memory usage          no_value 
+Hostname                           auto.ece.pdx.edu
+@genus:root: 4> exit
+Normal exit.
