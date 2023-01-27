@@ -4,7 +4,7 @@ Report : constraint
         -all_violators
 Design : fifo1_sram
 Version: Q-2019.12-SP3
-Date   : Thu Jan 26 21:54:48 2023
+Date   : Fri Jan 27 00:24:47 2023
 ****************************************
 
 
@@ -42,7 +42,7 @@ Date   : Thu Jan 26 21:54:48 2023
                              Required        Actual
    Design                   Leakage Power  Leakage Power     Slack
    -----------------------------------------------------------------
-   fifo1_sram                   0.00       1112583680.00  -1112583680.00
+   fifo1_sram                   0.00       1112632448.00  -1112632448.00
                                                                     (VIOLATED)
 
 
